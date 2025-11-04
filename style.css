@@ -1,0 +1,76 @@
+.body {
+  display: flex;
+  justify-content: center;
+  font-family: system-ui, sans-serif;
+  margin-top: 50px;
+}
+.box {
+  display: inline-block;
+  height: 100px;
+  width: 80px;
+  background-color: grey;
+  margin-left: 10px;
+  cursor: pointer;
+  border: solid black;
+}
+
+.main {
+  border: solid darkblue;
+  width: 610px;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.name {
+  display: flex;
+  justify-content: center;
+  font-family: "Times New Roman", sans-serif;
+  font-size: large;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.start {
+  display: flex;
+  justify-content: center;
+  font-family: "Times New Roman", sans-serif;
+  font-size: large;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.message {
+  display: flex;
+  justify-content: center;
+  font-family: "Times New Roman", sans-serif;
+  font-size: large;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.clicks {
+  display: flex;
+  justify-content: center;
+  font-family: "Times New Roman", sans-serif;
+  font-size: large;
+  font-weight: 900;
+  margin-top: 10px;
+  font-style: italic;
+  color: red;
+}
+.counts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Times New Roman", sans-serif;
+  font-size: large;
+  font-weight: 900;
+  margin-top: 10px;
+  font-style: italic;
+}
+.click-left {
+  color: black;
+}
+
+.click-counts {
+  color: black;
+}
