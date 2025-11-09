@@ -119,6 +119,7 @@ const clicksLeft = document.querySelector(".main");
 const boxes = document.querySelectorAll(".box");
 const movesRemaining = document.querySelector(".click-counts");
 let clickCounts = 0;
+const messageDiv = document.querySelector(".game-message");
 
 /* ------------functions--------------- */
 
@@ -126,10 +127,9 @@ let clickCounts = 0;
 clicksLeft.addEventListener("click", () => {
   clickCounts = clickCounts + 1;
   movesRemaining.textContent = parseInt(108 - clickCounts);
-  if (movesRemaining.textContent <= 0) {
-    setTimeout(() =>
-      alert("You lost! Please refresh the page to restart the game!s")
-    );
+  //Just changed
+  if (parseInt(movesRemaining.textContent) <= 0) {
+    showMessage("❌ You lost! Refresh to try again.", "lose");
   }
 });
 
@@ -177,9 +177,9 @@ function checkMatch() {
     matches++;
 
     resetPicks();
-
+    // Just changed
     if (matches === vegetables.length) {
-      setTimeout(() => alert("🎉 Congratulations you WON!!!! "));
+      showMessage("🎉 Congratulations! You won!", "win");
     }
   } else {
     setTimeout(() => {
@@ -193,4 +193,18 @@ function checkMatch() {
 function resetPicks() {
   [firstPick, secondPick] = [null, null];
   lockBoard = false;
+}
+//Just added
+function showMessage(msg, type = "info") {
+  messageDiv.textContent = msg;
+  // Style based on type
+  if (type === "win") {
+    messageDiv.style.color = "green";
+  } else if (type === "lose") {
+    messageDiv.style.color = "red";
+  } else {
+    messageDiv.style.color = "black";
+  }
+  // Stop interaction after game ends
+  lockBoard = true;
 }

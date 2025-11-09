@@ -14,6 +14,12 @@
   border: solid black;
 }
 
+.game-message {
+  text-align: center;
+  margin-top: 15px;
+  font-size: large;
+}
+
 .main {
   border: solid darkblue;
   width: 610px;
