@@ -4,6 +4,4 @@
 
 ## Technologies used: HTML, CSS and JavaScript
 
-## Game Screenshot:
-
-![Game Screenshot] screenshot/Concentration_Game.png
+## Game Screenshot: screenshot/Concentration_Game.png
